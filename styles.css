@@ -15,12 +15,6 @@ header {
     position: sticky;
     top: 0;
     z-index: 100;
-    transition: background-color 0.5s ease-out;
-}
-
-header.sticky {
-    background-color: rgba(255, 255, 255, 0.9);
-    transition: background-color 0.5s ease-in;
 }
 
 header h1 {
@@ -82,6 +76,7 @@ nav ul li a {
         width: 100%;
         text-align: right;
         padding: 10px;
+        transition: all 0.3s ease;
     }
 
     nav ul.active {
@@ -90,6 +85,35 @@ nav ul li a {
 
     .hamburger {
         display: flex;
+    }
+
+    #overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        z-index: 99;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s ease;
+    }
+
+    #overlay.active {
+        display: flex;
+    }
+
+    #overlay nav ul {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #overlay nav ul li a {
+        color: #fff;
+        font-size: 2em;
     }
 }
 
