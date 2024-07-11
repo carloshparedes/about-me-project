@@ -117,11 +117,13 @@ footer .social a {
 
 @media (max-width: 768px) {
     .intro {
-        flex-direction: column-reverse;
+        flex-direction: column;
+        align-items: center;
         text-align: center;
     }
 
-    .profile-pic img {
+    .profile-pic {
+        order: -1;
         margin-bottom: 20px;
     }
 
@@ -133,5 +135,17 @@ footer .social a {
     .services {
         flex-direction: column;
         align-items: center;
+    }
+}
+
+@media (min-width: 769px) {
+    .intro {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .profile-pic {
+        order: 1;
+        margin-bottom: 0;
     }
 }
